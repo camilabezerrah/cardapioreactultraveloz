@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcardapio_react_v2=self.webpackChunkcardapio_react_v2||[]).push([[511],{511:(a,e,r)=>{r.r(e),r.d(e,{default:()=>i});r(43);var c=r(579);const i=function(){return(0,c.jsx)("div",{children:(0,c.jsx)("p",{children:"Esta \xe9 uma informa\xe7\xe3o adicional sobre o card\xe1pio. Bom apetite!"})})}}}]);
+//# sourceMappingURL=511.a183fd94.chunk.js.map
