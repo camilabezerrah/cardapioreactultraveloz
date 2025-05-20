@@ -1,13 +1,29 @@
+/* Configuração das fontes padrão da aplicação */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  
+  /* Assegura que a renderização da fonte será mais suave */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Aplicando font-display: swap a fontes personalizadas */
+@font-face {
+  font-family: 'MinhaFonteCustomizada';
+  src: url('/fonts/minhafonte.woff2') format('woff2'); /* Caminho para a fonte auto-hospedada */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Garantindo que o texto será visível antes da fonte carregar */
+}
+
+/* Estilo para fontes de código */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Configuração de fontes do Google - adicionar display=swap na URL */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Garantindo que a fonte será carregada com o display=swap */
