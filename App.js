@@ -1,15 +1,17 @@
 import React, { Suspense, lazy } from 'react';
-import MenuList from './components/MenuList'; // Componente principal do cardápio
 import './App.css'; // Estilos
 
-// Lazy load do componente ExtraInfo (code splitting)
-const ExtraInfo = lazy(() => import('./components/ExtraInfo'));
+// Lazy load dos componentes
+const MenuList = lazy(() => import('./components/MenuList')); // Menu do cardápio
+const ExtraInfo = lazy(() => import('./components/ExtraInfo')); // Informações extras
 
 function App() {
   return (
     <div className="App">
-      {/* Renderiza a lista de itens do cardápio */}
-      <MenuList />
+      {/* Renderiza o menu do cardápio sob demanda */}
+      <Suspense fallback={<div>Carregando cardápio...</div>}>
+        <MenuList />
+      </Suspense>
 
       {/* Renderiza informações adicionais sob demanda */}
       <h2>Informações Adicionais</h2>
